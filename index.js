@@ -1,6 +1,6 @@
-import {createStore} from 'redux';
-
-function counter(state = 0, action) {
+//import {createStore} from 'redux';
+const {createStore} = Redux;
+function counter(state = 0 , action) {
     switch (action.type) {
         case 'INCREMENT':
             return state + 1;
@@ -17,7 +17,7 @@ const store = createStore(counter);
 
 function render() {
     const state = store.getState();
-    document.querySelector('#app').innerHTML = 'Counter : ${state}';
+    document.querySelector('#app').innerHTML = `Counter : ${state}`;
 }
 
 const incrementButton = document.querySelector('#increment');
